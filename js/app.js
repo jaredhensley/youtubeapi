@@ -21,15 +21,16 @@ $(document).ready(function() {
 	}
 
 	function showResults(myData) {
-		console.log(myData);
 		var html = '';
 		$.each(myData, function (index,value) {
-			/*console.log(myData.items[0]);*/
-			html += "<img src=" + value.snippet.thumbnails.medium.url +"><br>";
-
+			var imgURL = value.snippet.thumbnails.medium.url;
+			var image = document.createElement("img");
+			image.src = imgURL;
+			$(".search-results").append(image);
+			$(".search-results").children("img").wrap("<a href='http://www.google.com'></a>");
 		});
 
-		$(".search-results").append(html);
+		/*$(".search-results").append(html);*/
 	}
 
 
