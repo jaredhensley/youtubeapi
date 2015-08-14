@@ -22,12 +22,14 @@ $(document).ready(function() {
 
 	function showResults(myData) {
 		var html = '';
+		console.log(myData);
 		$.each(myData, function (index,value) {
+			var youtubeSearch = "https://www.youtube.com/watch?v=";
 			var imgURL = value.snippet.thumbnails.medium.url;
 			var image = document.createElement("img");
 			image.src = imgURL;
-			$(".search-results").append(image);
-			$(".search-results").children("img").wrap("<a href='http://www.google.com'></a>");
+			$(".search-results").append(image).find(image).wrap("<a href="+youtubeSearch+value.id.videoId+"></a>");
+			/*html += "<img href="www.google.com"src=" + imgURL  + "><br>";*/
 		});
 
 		/*$(".search-results").append(html);*/
