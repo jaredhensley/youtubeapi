@@ -3,6 +3,7 @@ $(document).ready(function() {
 		event.preventDefault();
 		var searchEntry = $("#query").val();
 		getRequest(searchEntry);
+		$("#query").text("");
 	});
 
 	function getRequest(searchEntry) {
@@ -22,8 +23,7 @@ $(document).ready(function() {
 	}
 
 	function showResults(myData) {
-		var html = '';
-		console.log(myData);
+		$(".search-results").empty();
 		$.each(myData, function (index,value) {
 			var youtubeSearch = "https://www.youtube.com/watch?v=";
 			var imgURL = value.snippet.thumbnails.medium.url;
