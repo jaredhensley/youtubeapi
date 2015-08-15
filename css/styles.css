@@ -1,0 +1,29 @@
+.container {
+	background-color: black;
+	width: 55%;
+	border-radius: 10px;
+	margin: 3em auto 0 auto;
+	height: 485px;
+}
+
+#search-term {
+	text-align: center;
+	margin-top: 2em;
+	padding-top: 2em;
+	margin-bottom: 2em;
+
+}
+
+.search-results {
+	text-align: justify;
+}
+
+img {
+	margin: .5em;
+	border-radius: 5px;
+}
+
+.title {
+	text-align: center;
+
+}

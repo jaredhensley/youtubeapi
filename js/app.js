@@ -9,7 +9,8 @@ $(document).ready(function() {
 		var params= {
 			part: 'snippet',
 			key: "AIzaSyDWa0xZPMXm-Qdy4c2LAlFhdZIB-P9RQbY",
-			q: searchEntry
+			q: searchEntry,
+			maxResults: 6
 
 		};
 		url = "https://www.googleapis.com/youtube/v3/search" ;
@@ -29,6 +30,7 @@ $(document).ready(function() {
 			var image = document.createElement("img");
 			image.src = imgURL;
 			$(".search-results").append(image).find(image).wrap("<a href="+youtubeSearch+value.id.videoId+"></a>");
+			/*$(".search-results").append("<br>");*/
 			/*html += "<img href="www.google.com"src=" + imgURL  + "><br>";*/
 		});
 
