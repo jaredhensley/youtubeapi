@@ -1,8 +1,10 @@
 $(document).ready(function() {
+  $(".search-results").css("height","400px");
   $("form").on("submit", function(event) {
     event.preventDefault();
     var searchEntry = $("#query").val();
     getRequest(searchEntry);
+  $(".search-results").css("height","44.4%");
     $("#query").val("");
   });
 
